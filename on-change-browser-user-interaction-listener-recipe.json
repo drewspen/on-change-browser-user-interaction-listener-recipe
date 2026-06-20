@@ -1,0 +1,1726 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2026-06-20 17:32:49",
+    "containerVersion": {
+        "path": "accounts/1111111111/containers/999999999/versions/0",
+        "accountId": "1111111111",
+        "containerId": "999999999",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/1111111111/containers/999999999",
+            "accountId": "1111111111",
+            "containerId": "999999999",
+            "name": "onChange-listener",
+            "publicId": "GTM-AAAAAAAA",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "2222222222222",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/1111111111/containers/999999999/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-AAAAAAAA"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "tagId": "40",
+                "name": "Google Analytics Configuration",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "{{Measurement Stream RegEx Lookup}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "configSettingsVariable",
+                        "value": "{{Google Tag Shared Configuration Settings}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{Google Tag Shared Event Settings}}"
+                    }
+                ],
+                "fingerprint": "1781972290417",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "parentFolderId": "5",
+                "tagFiringOption": "ONCE_PER_LOAD",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "tagId": "60",
+                "name": "onChange Event Push",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "onChange_class"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Coalesce Click Class Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "onChange_element"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Coalesce Click Elements}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "onChange_path"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Page Path}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "onChange"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{Measurement Stream RegEx Lookup}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{Google Tag Shared Event Settings}}"
+                    }
+                ],
+                "fingerprint": "1781976506590",
+                "firingTriggerId": [
+                    "55"
+                ],
+                "parentFolderId": "54",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "tagId": "63",
+                "name": "onChange Listener",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  var eventType = 'change'; // Modify this to reflect the event type you want to listen for\n  if (document.addEventListener) {\n    document.addEventListener(eventType, {{generic event handler}}, false);\n  } \n  else if (document.attachEvent) {\n    document.attachEvent('on' + eventType, {{generic event handler}});\n  }\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1781976310184",
+                "firingTriggerId": [
+                    "62"
+                ],
+                "parentFolderId": "54",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NEEDED",
+                    "consentType": {
+                        "type": "LIST",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "analytics_storage"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "triggerId": "55",
+                "name": "gtm.js change",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "gtm.change"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1781976310183",
+                "parentFolderId": "54"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "triggerId": "62",
+                "name": "gtm.js load",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "gtm.js"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1781976310184",
+                "parentFolderId": "54"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "9",
+                "name": "Browser Client ID",
+                "type": "analytics_storage",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "dataField",
+                        "value": "client_id"
+                    }
+                ],
+                "fingerprint": "1781972290412",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "10",
+                "name": "Page Title",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "document.title"
+                    }
+                ],
+                "fingerprint": "1781972290412",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "14",
+                "name": "GTM Environment Name",
+                "type": "ev",
+                "fingerprint": "1781972290413",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "17",
+                "name": "Environment Stream ID",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Environment Name}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "{{Measurement Stream ID Production}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^liv.*"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Measurement Stream ID Production}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^(pre|de|st|ua|qa|te).*"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Measurement Stream ID Development}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1781972290415",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "18",
+                "name": "Measurement Stream RegEx Lookup",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Page URL}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "{{Environment Stream ID}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^htt(p|ps)\\:\\/\\/(dev|uat|qa|orig|stg|stage|staging|int|local|admin|aem)[^a-zA-Z\\d\\s]"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Measurement Stream ID Development}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^htt(p|ps)\\:\\/\\/gtm\\-msr\\.appspot\\.com"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Measurement Stream ID Development}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "\\/rende(r|r2|r\\/|r2\\/)\\?id\\=GTM\\-"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Measurement Stream ID Development}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1781972290415",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "25",
+                "name": "GTM Container ID",
+                "type": "cid",
+                "fingerprint": "1781972290416",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "29",
+                "name": "Extract First User Session ID Timestamp from Client ID",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Browser Client ID}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^(.*)\\.(.*)$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "$2"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1781972290416",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "31",
+                "name": "Undefined Value",
+                "type": "uv",
+                "fingerprint": "1781972290417",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "32",
+                "name": "Browser Client ID Append Underscore",
+                "type": "cvt_999999999_15",
+                "notes": "append underscore to address BigQuery double float precision issue by forcing BigQuery to store as string. have to do it this way to prevent the passing of a lone underscore if the client_id is undefined.\nmodified to address issue where _ga cookie value was populated with the text word undefined due to sep 2022 error. also treat blank or any other non _ga cookie value as a javascript undefined so that those cookie contents to contribute to the user parameter value passed to ga4.",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "rule_table",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Browser Client ID}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "matchesRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^[0-9].*"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Browser Client ID}}_"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Browser Client ID}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "matchesRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Undefined Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Browser Client ID}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "equals"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "(not set)"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Undefined Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Browser Client ID}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "matchesRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^\\s*$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Undefined Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Browser Client ID}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "matchesRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Undefined Value}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "default_value",
+                        "value": "{{Browser Client ID}}"
+                    }
+                ],
+                "fingerprint": "1781972290417",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "36",
+                "name": "Google Tag Shared Configuration Settings",
+                "type": "gtcs",
+                "notes": "remove server_container_url {{sGTM Server Container URL}} due to end of free account from Stape.io",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "configSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "debug_mode"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "true"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "send_page_view"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "false"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1781972290417",
+                "parentFolderId": "5"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "41",
+                "name": "Measurement Stream ID Development",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-ZZZZZZZZ"
+                    }
+                ],
+                "fingerprint": "1781976395617",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "42",
+                "name": "Measurement Stream ID Production",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-AAAAAAAA"
+                    }
+                ],
+                "fingerprint": "1781976381442",
+                "parentFolderId": "5",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "45",
+                "name": "Google Tag Shared Event Settings",
+                "type": "gtes",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "container_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{GTM Container ID}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "environment_name"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{GTM Environment Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "stream_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Measurement Stream RegEx Lookup}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "e_client_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Browser Client ID Append Underscore}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_title"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Page Title}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "userProperties",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "u_client_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Browser Client ID Append Underscore}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1781976742750",
+                "parentFolderId": "5"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "47",
+                "name": "Click Element Great Grandparent Class Name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "gtm.element.parentElement.parentElement.parentElement.className"
+                    }
+                ],
+                "fingerprint": "1781976310182",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "48",
+                "name": "Click Element Great Grandparent thru Great Uncle Class Name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "gtm.element.parentElement.parentElement.previousSibling.parentElement.className"
+                    }
+                ],
+                "fingerprint": "1781976310182",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "49",
+                "name": "Click Element Parent Class Name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "gtm.element.parentElement.className"
+                    }
+                ],
+                "fingerprint": "1781976310182",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "50",
+                "name": "Click Element Uncle Class Name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "gtm.element.parentElement.previousSibling.className"
+                    }
+                ],
+                "fingerprint": "1781976310182",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "51",
+                "name": "Click Element Grandparent Class Name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "gtm.element.parentElement.parentElement.className"
+                    }
+                ],
+                "fingerprint": "1781976310182",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "52",
+                "name": "Click Element Great Uncle Class Name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "gtm.element.parentElement.parentElement.previousSibling.className"
+                    }
+                ],
+                "fingerprint": "1781976310182",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "53",
+                "name": "Coalesce Click Class Name",
+                "type": "cvt_999999999_15",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "rule_table",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Classes}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Classes}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Element Parent Class Name}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Element Parent Class Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Element Uncle Class Name}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Element Uncle Class Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Element Grandparent Class Name}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Element Grandparent Class Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Element Great Uncle Class Name}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Element Great Uncle Class Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Element Great Grandparent Class Name}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Element Great Grandparent Class Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Element Great Grandparent thru Great Uncle Class Name}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Element Great Grandparent thru Great Uncle Class Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Target}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Target}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "default_value",
+                        "value": "{{Click ID}}"
+                    }
+                ],
+                "fingerprint": "1781976310183",
+                "parentFolderId": "46",
+                "formatValue": {
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "unspecified"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "unspecified"
+                    }
+                }
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "56",
+                "name": "Element Name",
+                "type": "aev",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "varType",
+                        "value": "ATTRIBUTE"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "attribute",
+                        "value": "name"
+                    }
+                ],
+                "fingerprint": "1781976310183",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "57",
+                "name": "Element Value",
+                "type": "aev",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "varType",
+                        "value": "ATTRIBUTE"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "attribute",
+                        "value": "value"
+                    }
+                ],
+                "fingerprint": "1781976310183",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "58",
+                "name": "Element Title",
+                "type": "aev",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "varType",
+                        "value": "ATTRIBUTE"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "attribute",
+                        "value": "title"
+                    }
+                ],
+                "fingerprint": "1781976310183",
+                "parentFolderId": "46",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "59",
+                "name": "Coalesce Click Elements",
+                "type": "cvt_999999999_15",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "rule_table",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Text}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Text}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Element Title}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Element Title}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Element Name}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Element Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Element Value}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Element Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Classes}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Classes}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Element}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Element}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click Target}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click Target}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "entry",
+                                        "value": "{{Click ID}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "method",
+                                        "value": "doesNotMatchRegExIgnoreCase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "comparator",
+                                        "value": "^(undefined|null|0|true|false|NaN|)$|\\[object"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "returnValue",
+                                        "value": "{{Click ID}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "default_value",
+                        "value": "{{Click URL}}"
+                    }
+                ],
+                "fingerprint": "1781976310183",
+                "parentFolderId": "46",
+                "formatValue": {
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "unspecified"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "unspecified"
+                    }
+                }
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "variableId": "61",
+                "name": "generic event handler",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  return function(e) {\n    window.dataLayer.push({\n      'event': 'gtm.'+e.type,\n      'gtm.element': e.target,\n      'gtm.elementClasses': e.target.className || '',\n      'gtm.elementId': e.target.id || '',\n      'gtm.elementTarget': e.target.target || '',\n      'gtm.elementUrl': e.target.href || e.target.action || '',\n      'gtm.originalEvent': e\n    });\n  }\n}"
+                    }
+                ],
+                "fingerprint": "1781976310184",
+                "parentFolderId": "54",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "folderId": "5",
+                "name": "Analytics",
+                "fingerprint": "1781972290411"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "folderId": "46",
+                "name": "Element Hierarchy",
+                "fingerprint": "1781976310181"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "folderId": "54",
+                "name": "Custom Events",
+                "fingerprint": "1781976310183"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "type": "ENVIRONMENT_NAME",
+                "name": "Environment Name"
+            }
+        ],
+        "fingerprint": "1781976769854",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/1111111111/containers/999999999/versions/0?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "1111111111",
+                "containerId": "999999999",
+                "templateId": "15",
+                "name": "If Else If - Advanced Lookup Table",
+                "fingerprint": "1781972290413",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"displayName\": \"If Else If - Advanced Lookup Table\",\n  \"description\": \"An advanced lookup table with multiple tests and returns (by Sublimetrix)\",\n  \"securityGroups\": [],\n  \"id\": \"cvt_temp_public_id\",\n  \"type\": \"MACRO\",\n  \"version\": 1,\n  \"containerContexts\": [\n    \"WEB\"\n  ],\n  \"brand\": {\n    \"displayName\": \"sublimetrix\",\n    \"id\": \"github.com_sublimetrix\"\n  }\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"displayName\": \"Documentation : https://github.com/sublimetrix/gtm-template-ifelseif\",\n    \"name\": \"documentation\",\n    \"type\": \"LABEL\"\n  },\n  {\n    \"alwaysInSummary\": false,\n    \"displayName\": \"Rule table\",\n    \"name\": \"rule_table\",\n    \"simpleTableColumns\": [\n      {\n        \"valueValidators\": [\n          {\n            \"type\": \"NON_EMPTY\"\n          }\n        ],\n        \"defaultValue\": \"\",\n        \"displayName\": \"If\",\n        \"name\": \"entry\",\n        \"type\": \"TEXT\"\n      },\n      {\n        \"selectItems\": [\n          {\n            \"displayValue\": \"equals\",\n            \"value\": \"equals\"\n          },\n          {\n            \"displayValue\": \"contains\",\n            \"value\": \"contains\"\n          },\n          {\n            \"displayValue\": \"starts with\",\n            \"value\": \"startsWith\"\n          },\n          {\n            \"displayValue\": \"ends with\",\n            \"value\": \"endsWith\"\n          },\n          {\n            \"displayValue\": \"matches RegEx\",\n            \"value\": \"matchesRegEx\"\n          },\n          {\n            \"displayValue\": \"matches RegEx (ignore case)\",\n            \"value\": \"matchesRegExIgnoreCase\"\n          },\n          {\n            \"displayValue\": \"does not equal\",\n            \"value\": \"doesNotEqual\"\n          },\n          {\n            \"displayValue\": \"does not contain\",\n            \"value\": \"doesNotContain\"\n          },\n          {\n            \"displayValue\": \"does not start with\",\n            \"value\": \"doesNotStartWith\"\n          },\n          {\n            \"displayValue\": \"does not end with\",\n            \"value\": \"doesNotEndWith\"\n          },\n          {\n            \"displayValue\": \"does not match RegEx\",\n            \"value\": \"doesNotMatchRegEx\"\n          },\n          {\n            \"displayValue\": \"does not match RegEx (ignore case)\",\n            \"value\": \"doesNotMatchRegExIgnoreCase\"\n          },\n          {\n            \"displayValue\": \"less than\",\n            \"value\": \"lessThan\"\n          },\n          {\n            \"displayValue\": \"less than or equal to\",\n            \"value\": \"lessThanOrEqualTo\"\n          },\n          {\n            \"displayValue\": \"greater than\",\n            \"value\": \"greaterThan\"\n          },\n          {\n            \"displayValue\": \"greater than or equal to\",\n            \"value\": \"greaterThanOrEqualTo\"\n          }\n        ],\n        \"defaultValue\": \"equals\",\n        \"displayName\": \"Matches\",\n        \"name\": \"method\",\n        \"type\": \"SELECT\"\n      },\n      {\n        \"valueValidators\": [\n          {\n            \"type\": \"NON_EMPTY\"\n          }\n        ],\n        \"defaultValue\": \"\",\n        \"displayName\": \"This\",\n        \"name\": \"comparator\",\n        \"isUnique\": false,\n        \"type\": \"TEXT\"\n      },\n      {\n        \"selectItems\": [],\n        \"valueValidators\": [\n          {\n            \"type\": \"NON_EMPTY\"\n          }\n        ],\n        \"defaultValue\": \"\",\n        \"displayName\": \"Return\",\n        \"name\": \"returnValue\",\n        \"type\": \"TEXT\"\n      }\n    ],\n    \"type\": \"SIMPLE_TABLE\",\n    \"newRowButtonText\": \"Else If\"\n  },\n  {\n    \"displayName\": \"Else (default value, leave empty to return undefined)\",\n    \"simpleValueType\": true,\n    \"name\": \"default_value\",\n    \"type\": \"TEXT\"\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\n//const log = require('logToConsole');\n//log('data =', data);\nconst defaultValue = data.default_value;\n\nconst RULE = {\n  equals: (entry,comp) => {\n  \treturn entry == comp;\n  },\n  contains: (entry,comp) => {\n  \treturn (-1 < entry.indexOf(comp));\n  },\n  startsWith: (entry,comp) => {\n  \treturn entry.match('^('+comp+')');\n  },\n  endsWith: (entry,comp) => {\n  \treturn entry.match('('+comp+')$');\n  },\n  /***\n   *** not available\n  matchesCssSelector: (entry,comp) => {\n  \treturn entry.match(comp); // wip\n  },\n  ***/\n  matchesRegEx: (entry,comp) => {\n  \treturn entry.match(comp);\n  },\n  matchesRegExIgnoreCase: (entry,comp) => {\n  \treturn entry.toLowerCase().match(comp.toLowerCase());\n  },\n  doesNotEqual: (entry,comp) => {\n  \treturn entry != comp;\n  },\n  doesNotContain: (entry,comp) => {\n  \treturn (-1 > entry.indexOf(comp));\n  },\n  doesNotStartWith: (entry,comp) => {\n  \treturn !entry.match('^('+comp+')');\n  },\n  doesNotEndWith: (entry,comp) => {\n  \treturn !entry.match('('+comp+')$');\n  },\n  /***\n   *** not available\n  doesNotMatchCssSelector: (entry,comp) => {\n  \treturn false; // wip\n  },\n  ***/\n  doesNotMatchRegEx: (entry,comp) => {\n  \treturn !entry.match(comp);\n  },\n  doesNotMatchRegExIgnoreCase: (entry,comp) => {\n  \treturn !entry.toLowerCase().match(comp.toLowerCase());\n  },\n  lessThan: (entry,comp) => {\n  \treturn entry < comp;\n  },\n  lessThanOrEqualTo: (entry,comp) => {\n  \treturn entry <= comp;\n  },\n  greaterThan: (entry,comp) => {\n  \treturn entry > comp;\n  },\n  greaterThanOrEqualTo: (entry,comp) => {\n  \treturn entry >= comp;\n  }\n};\n\nconst rules = data.rule_table;\nif ('undefined' != typeof rules) {\n  for (let i=0; i<rules.length; i++) {\n    const rule = rules[i];\n    if ( RULE[rule.method](resolve(rule.entry),resolve(rule.comparator)) ) return rule.returnValue;\n  }\n}\n\nfunction resolve(x)\n{\n  switch (typeof x) {\n    case 'undefined': x = typeof x; break;\n    case 'boolean': x = x ? 'true' : 'false'; break;\n  }\n  return x;\n}\n\nreturn defaultValue;\n\n\n___TESTS___\n\nscenarios: []\n\n\n___NOTES___\n\n/*** SUBLIMETRIX ***/\nVersion: 1.0.0\nAuthor: Sublimetrix\nDate: 2019.10.09\n/*******************/\n\nChange Log:\n1.0.0: Initial Version\n1.1.0: Default value\n1.1.1: Fix boolean issue + remove log requirement\n1.1.2: Optimization\n1.2.0: Name change\n1.2.1: Fix on \"contains\" & \"does not contains\" comparators\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "sublimetrix",
+                    "repository": "gtm-template-ifelseif",
+                    "version": "1a2a5ad38afc4539d9adde44db786eac0cc70071",
+                    "signature": "ae330cad0667e003bca886ae2419515e9b5a894b5ea88607d9edd2f2c65015b7"
+                }
+            }
+        ]
+    }
+}
